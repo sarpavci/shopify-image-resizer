@@ -1,0 +1,3 @@
+type GetResizeHistoryPayload = {
+  id: string;
+}

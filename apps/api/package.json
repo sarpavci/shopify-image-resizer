@@ -1,0 +1,29 @@
+{
+  "name": "@shopify-image-resizer/api",
+  "version": "0.0.1",
+  "private": true,
+  "nx": {
+    "targets": {
+      "serve": {
+        "continuous": true,
+        "executor": "@nx/js:node",
+        "defaultConfiguration": "development",
+        "dependsOn": [
+          "build"
+        ],
+        "options": {
+          "buildTarget": "@shopify-image-resizer/api:build",
+          "runBuildTargetDependencies": false
+        },
+        "configurations": {
+          "development": {
+            "buildTarget": "@shopify-image-resizer/api:build:development"
+          },
+          "production": {
+            "buildTarget": "@shopify-image-resizer/api:build:production"
+          }
+        }
+      }
+    }
+  }
+}
